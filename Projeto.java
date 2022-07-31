@@ -28,20 +28,20 @@ public class Projeto {
         // System.out.println(heroList.size());
 
         // exibir e manipular os dados
-        // for (Map<String,String> hero : heroList) {
+        for (Map<String,String> hero : heroList) {
 
-        //     String heroName = hero.get("name");
-        //     String localizedName = hero.get("localized_name");
+            String heroName = hero.get("name");
+            String localizedName = hero.get("localized_name");
 
-        //     String urlImagem = "https://cdn.cloudflare.steamstatic.com/apps/dota2/videos/dota_react/heroes/renders/antimage.png";
+            String urlImagem = "https://cdn.cloudflare.steamstatic.com/apps/dota2/videos/dota_react/heroes/renders/antimage.png";
 
-        //     InputStream inputStream = new URL(urlImagem).openStream();
-        //     String nomeArquivo = heroName + "_sticker.png";
+            InputStream inputStream = new URL(urlImagem).openStream();
+            String nomeArquivo = heroName + "_sticker.png";
 
-        //     var generator = new StickerGen();
-        //     generator.cria(inputStream, nomeArquivo);
+            var generator = new StickerGen();
+            generator.cria(inputStream, nomeArquivo);
 
-        //     System.out.println(hero.get("name"));
-        // }
+            System.out.println(hero.get("name"));
+        }
     }
 }
