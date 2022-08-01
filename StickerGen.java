@@ -47,9 +47,9 @@ public class StickerGen {
         ImageIO.write(novaImagem, "png", new File(nomeArquivo));
     }
 
-    // public static void main(String[] args) throws Exception {
-    //     var gen = new StickerGen();
-    //     gen.cria();
-    // }
+    public static void main(String[] args) throws Exception {
+        var gen = new StickerGen();
+        gen.cria();
+    }
     
 }
