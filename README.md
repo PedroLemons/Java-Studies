@@ -1,2 +1,2 @@
 # Java-Studies
-Repositório para arquivos de estudo de Java
+Repositório para arquivos de estudo de Java.
