@@ -40,8 +40,6 @@ public class Projeto {
 
             var generator = new StickerGen();
             generator.cria(inputStream, nomeArquivo);
-
-            System.out.println(hero.get("name"));
         }
     }
 }
