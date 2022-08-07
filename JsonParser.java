@@ -1,5 +1,4 @@
 import java.io.FileInputStream;
-import java.io.FileReader;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -45,5 +44,4 @@ public class JsonParser {
     public List<Map<String, String>> parse(FileInputStream fileInputStream) {
         return null;
     }
-    
 }

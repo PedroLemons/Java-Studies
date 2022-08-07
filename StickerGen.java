@@ -1,17 +1,17 @@
-import java.awt.image.BufferedImage;
-import java.io.File;
-import java.io.InputStream;
-import java.awt.Graphics2D;
 import java.awt.Color;
 import java.awt.Font;
 import java.awt.FontMetrics;
+import java.awt.Graphics2D;
+import java.awt.image.BufferedImage;
+import java.io.File;
+import java.io.InputStream;
 
 import javax.imageio.ImageIO;
 import javax.swing.plaf.FontUIResource;
 
 public class StickerGen {
 
-    public void cria (InputStream inputStream, String nomeArquivo) throws Exception {
+    public void create (InputStream inputStream, String nomeArquivo) throws Exception {
 
         // leitura de imagem
         // ?????????
@@ -35,21 +35,17 @@ public class StickerGen {
         g.setFont(fonte);
 
         // escrever uma frase na nova imagem
-        Projeto projeto = new Projeto();
-        String topText = projeto.localizedName;
-        String bottomText = "DOTA 4";
+        /////////////////// ContentExtractorDota ContentExtractorDota = new ContentExtractorDota();
+        /////////////////// String localizedName = ContentExtractorDota.get(localizedName);
+        String topText = "localizedName";
+        String bottomText = "DOTA 2";
         int posX = 740, posY = 180;
         FontMetrics fm = g.getFontMetrics();
         g.drawString(topText, posX - fm.stringWidth(topText)/2, posY );
         g.drawString(bottomText, posX - fm.stringWidth(bottomText)/2, altura - 80 );
 
         // escrever a nova imagem em um arquivo
-        ImageIO.write(novaImagem, "png", new File(nomeArquivo));
+        ImageIO.write(novaImagem, "png", new File("C:/Users/Pedro/OneDrive/Área de Trabalho/JavaDota/DotaStickers/saida" + nomeArquivo));
     }
 
-    public static void main(String[] args) throws Exception {
-        var gen = new StickerGen();
-        gen.cria();
-    }
-    
 }
